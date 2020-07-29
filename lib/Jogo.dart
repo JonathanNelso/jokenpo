@@ -6,6 +6,8 @@ class Jogo extends StatefulWidget {
 }
 
 class _JogoState extends State<Jogo> {
+  var _imagemApp = AssetImage("images/padrao.png");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +29,9 @@ class _JogoState extends State<Jogo> {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
-          Image.asset("images/padrao.png"),
+          Image(
+            image: this._imagemApp,
+          ),
           Padding(
             padding: EdgeInsets.only(top: 32, bottom: 16),
             child: Text(
